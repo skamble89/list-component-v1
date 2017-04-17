@@ -1,0 +1,53 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/paper-listbox/paper-listbox.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="./list-component-v1-styles.html">
+
+<!--
+`list-component-v1`
+
+
+@demo demo/index.html 
+-->
+
+<dom-module id="list-component-v1">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+      
+      paper-listbox {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        border: 1px solid #e1e6ed;
+        background: #fcfdff;
+        height: 300px;
+      }
+      
+      paper-listbox ::content paper-item {
+        font-weight: 100;
+      }      
+      
+    </style>
+    <paper-listbox>
+      <content></content>
+    </paper-listbox>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'list-component-v1',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'list-component-v1',
+        },
+      },
+
+    });
+  </script>
+</dom-module>
