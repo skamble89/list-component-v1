@@ -1,18 +1,26 @@
 <style is="custom-style">
-    :root paper-listbox paper-item {
-        --paper-item-focused-before: {
-          border-radius: 25px;
-        }
-        --paper-item-focused: {
-          border-radius: 25px;
-        }
-        --paper-item-selected-before: {
-          border-radius: 25px;
-        }
-        --paper-item-selected: {
-          color: #fff;
-          background: #5caadb;
-          border-radius: 25px;
-        }
-      }
+   :root .flex paper-listbox paper-item {
+    display: inline;
+    min-height: 15px;
+    margin: 10px;
+    --paper-item-focused-before: {
+      border-radius: 25px;
+    }
+    --paper-item-focused: {
+      border-radius: 25px;
+    }
+    --paper-item-selected-before: {
+      border-radius: 25px;
+    }
+    --paper-item-selected: {      
+      border-radius: 25px;
+    }
+  }
+  
+   :root paper-listbox paper-item {
+    --paper-item-selected: {
+      color: #fff;
+      background: #5caadb;
+    }
+  }
 </style>

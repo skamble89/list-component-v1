@@ -16,22 +16,22 @@
        :host {
         display: block;
       }
+
+      :host paper-listbox ::content paper-item {
+        font-weight: 100;        
+      }       
       
-      paper-listbox {
+      :host.flex paper-listbox {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         border: 1px solid #e1e6ed;
         background: #fcfdff;
-        height: 300px;
-      }
-      
-      paper-listbox ::content paper-item {
-        font-weight: 100;
+        height: 288px;
+        padding: 0;
       }      
-      
     </style>
-    <paper-listbox>
+    <paper-listbox selected="{{selected}}">
       <content></content>
     </paper-listbox>
   </template>
@@ -42,11 +42,19 @@
       is: 'list-component-v1',
 
       properties: {
-        prop1: {
+        name: {
           type: String,
           value: 'list-component-v1',
         },
+        selected: {
+          type: Number,
+          value: 0,
+        },
       },
+
+      ready: function() {
+        this.updateStyles();
+      }
 
     });
   </script>
